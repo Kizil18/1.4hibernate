@@ -4,11 +4,10 @@ import jm.task.core.jdbc.dao.UserDao;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    UserDao daoJDBC = new UserDaoJDBCImpl();
+    private UserDao daoJDBC = new UserDaoJDBCImpl();
     public void createUsersTable() {
         daoJDBC.createUsersTable();
     }

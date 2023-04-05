@@ -21,4 +21,13 @@ public class Util {
         }
         return connection;
     }
+
+    public static void closeConnection() {
+        try {
+            getConnection().close();
+            System.out.println("Connection close");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
